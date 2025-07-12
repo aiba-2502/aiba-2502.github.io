@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>職務経歴書</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* Simple Resume Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f8f9fa;
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  text-align: center;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #e9ecef;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.header .subtitle {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.toc {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+  border-left: 3px solid #2c3e50;
+}
+
+.toc h2 {
+  color: #2c3e50;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.toc ul {
+  list-style: none;
+}
+
+.toc li {
+  margin-bottom: 0.3rem;
+}
+
+.toc a {
+  color: #495057;
+  text-decoration: none;
+  padding: 0.2rem 0;
+  display: block;
+}
+
+.toc a:hover {
+  color: #2c3e50;
+  text-decoration: underline;
+}
+
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.section h2 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #dee2e6;
+  font-weight: 600;
+}
+
+.section h3 {
+  color: #495057;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  margin-top: 1.5rem;
+  font-weight: 500;
+}
+
+.section h4 {
+  color: #2c3e50;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  margin-top: 1.2rem;
+  font-weight: 500;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  border: 1px solid #dee2e6;
+}
+
+th {
+  background: #f8f9fa;
+  color: #495057;
+  padding: 0.8rem;
+  text-align: left;
+  font-weight: 600;
+  border: 1px solid #dee2e6;
+}
+
+td {
+  padding: 0.8rem;
+  border: 1px solid #dee2e6;
+  vertical-align: top;
+}
+
+tr:nth-child(even) {
+  background: #f8f9fa;
+}
+
+.company-info {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 0.8rem 0;
+  border-left: 3px solid #6c757d;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.4rem;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: #dee2e6;
+  margin: 1.5rem 0;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.skill-item {
+  padding: 0.5rem 0;
+}
+
+.skill-item strong {
+  color: #2c3e50;
+  margin-right: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem 0.5rem;
+  }
+  
+  .container {
+    padding: 2rem 1.5rem;
+    border-radius: 4px;
+  }
+  
+  .header h1 {
+    font-size: 1.8rem;
+  }
+  
+  table {
+    font-size: 0.9rem;
+  }
+  
+  th, td {
+    padding: 0.6rem 0.4rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white;
+    padding: 0;
+  }
+  
+  .container {
+    box-shadow: none;
+    border-radius: 0;
+    padding: 1rem;
+  }
+  
+  .section {
+    page-break-inside: avoid;
+  }
+}
+</style>
+
+<script>
+// Simple smooth scrolling
+document.addEventListener('DOMContentLoaded', function() {
+  const links = document.querySelectorAll('a[href^="#"]');
+  
+  links.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      const targetSection = document.querySelector(targetId);
+      
+      if (targetSection) {
+        targetSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+});
+</script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>職務経歴書</h1>
+    </div>
+    
+    <div class="toc">
+      <h2>目次</h2>
+      <ul>
+        <li><a href="#基本情報">基本情報</a></li>
+        <li><a href="#職務経歴">職務経歴</a>
+          <ul>
+            <li><a href="#会社概要">会社概要</a></li>
+            <li><a href="#所属役職">所属・役職</a></li>
+            <li><a href="#主なプロジェクト実績">主なプロジェクト実績</a></li>
+          </ul>
+        </li>
+        <li><a href="#活かせる経験">活かせる経験</a></li>
+        <li><a href="#スキル">スキル</a></li>
+        <li><a href="#aiツールの使用歴">AIツールの使用歴</a></li>
+        <li><a href="#株式会社ファーストローンチ様へ入社を志望する理由">株式会社ファーストローンチ様へ入社を志望する理由</a></li>
+      </ul>
+    </div>
+
+    <div class="section" id="基本情報">
+      <h2>基本情報</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>項目</th>
+            <th>内容</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>氏名</td>
+            <td>相庭開斗（あいばかいと）</td>
+          </tr>
+          <tr>
+            <td>生年月日</td>
+            <td>2001年7月27日</td>
+          </tr>
+          <tr>
+            <td>連絡先</td>
+            <td>☎︎：080-1855-6903<br>✉︎：d3ck4bq@gmail.com</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <hr>
+
+    <div class="section" id="職務経歴">
+      <h2>職務経歴</h2>
+      <h3 id="会社概要">会社概要</h3>
+      <div class="company-info">
+        <p><strong>【会社名】</strong>株式会社APOSTRO<br>
+        <strong>【事業内容】</strong>医療ITサポート事業<br>
+        <strong>【社員数】</strong>約70人</p>
+      </div>
+
+      <h4 id="所属役職">所属・役職</h4>
+      <div class="company-info">
+        <p><strong>【雇用形態】</strong>正社員<br>
+        <strong>【在職期間】</strong>2023/12 - 現在<br>
+        <strong>【所属】</strong>開発部<br>
+        <strong>【役職】</strong>メンバー（PGテックリード）</p>
+      </div>
+
+      <h4 id="主なプロジェクト実績">主なプロジェクト実績</h4>
+      <table>
+        <thead>
+          <tr>
+            <th>プロジェクト名</th>
+            <th>期間</th>
+            <th>役割</th>
+            <th>概要</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>.net患者管理アプリ 機能改修</td>
+            <td>2024/05 - 2024/07</td>
+            <td>詳細設計・実装・リリース</td>
+            <td>既存の患者管理システム(診察室案内,会計案内)に対して、新たな業務要件への対応およびUI/UX改善を目的とした機能追加・改修を行いました。多様なクリニックの業務フローや要望をヒアリング・反映し、汎用性の高い設計と柔軟な画面構成を実現。結果として、さまざまな医療機関に導入可能な、拡張性と操作性に優れたアプリケーションへと進化させました。</td>
+          </tr>
+          <tr>
+            <td>新機種釣銭機（GLORY社製RT-300）実装</td>
+            <td>2024/09 - 2024/12</td>
+            <td>詳細設計・実装・リリース</td>
+            <td>自動釣銭機の会計機能をPOSシステムに組み込むプロジェクトにおいて、GLORY社製の新機種RT-300に対応するためのインタフェース開発を担当しました。ハードウェア仕様書に基づくプロトコル解析から始まり、エラー処理や障害発生時のリカバリ動作など、実運用を想定した堅牢な連携設計を実施しました。</td>
+          </tr>
+          <tr>
+            <td>電子カルテ連携システムの構築および実装</td>
+            <td>2024/12 - 2025/2</td>
+            <td>顧客折衝・要件定義〜実装・リリース</td>
+            <td>kintoneを用いて電子カルテを管理しているクリニック向けに、弊社自動精算機とのインターフェイスシステムを構築し、電子カルテの会計情報と弊社自動精算機の情報を正確かつリアルタイムに連携するシステムを構築しました。結果、診療後の会計業務を大幅に効率化し、受付・会計業務の省力化と患者待機時間の短縮に貢献いたしました。</td>
+          </tr>
+          <tr>
+            <td>社内備品管理ツールの構築および実装</td>
+            <td>2025/01 - 2025/02</td>
+            <td>要件定義〜実装・リリース</td>
+            <td>社内で煩雑になっていた備品の申請・貸出・返却管理をデジタル化するため、業務フローの整理からWebアプリケーションの開発までを一貫して担当しました。ユーザビリティを重視したUI設計に加え、マスタデータ管理や履歴追跡機能も盛り込むことで、内部統制にも寄与するツールとなりました。</td>
+          </tr>
+          <tr>
+            <td>QRコード決済gatewayの構築および実装</td>
+            <td>2025/04 - 現在</td>
+            <td>要件定義〜実装・MVPリリース<br>（※ベンダー折衝：未担当）</td>
+            <td>複数のQRコード決済プロバイダーと統合する決済ゲートウェイAPIの開発を担当しました。決済スキームの違いを吸収する統一インタフェースの設計に加え、非同期処理や例外ハンドリングにも配慮した堅牢な実装を行いました。決済ステータスの即時反映やログ追跡性も重視し、MVPとしてリリース可能な品質を短期間で実現しました。ベンダーとの折衝部分はPMが担当しましたが、API仕様との整合性は密に確認いたしました。（※ 本プロジェクトは現在アウトソージングしての運用を想定しており、委託先企業との運用体制や弊社内の業務フロー調整を行なっております）</td>
+          </tr>
+        </tbody>
+      </table>
+      <p><em>※ 軽微な機能改修・テスト・バク修正プロジェクトについては、割愛させていただきます。</em></p>
+    </div>
+
+    <div class="section" id="活かせる経験">
+      <h2>活かせる経験</h2>
+      <ul>
+        <li>マイクロサービスの立ち上げ（要件定義,設計,実装）</li>
+        <li>抽象化・設計（水平・垂直スケーリング・ドメイン）思想を持ったAIコーディング指示</li>
+        <li>ソースコード上から閾値を把握したテストケースの作成</li>
+        <li>システムの構造を見抜く能力（ソフトウェアアーキテクチャ理解力）</li>
+        <li>その他：
+          <ul>
+            <li>顧客との要件調整、サービスイン時の運用検討、必要工数見積もり、進捗管理</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section" id="スキル">
+      <h2>スキル</h2>
+      <div class="skills-list">
+        <div class="skill-item"><strong>バックエンド:</strong> Python, C#, JavaScript, TypeScript, ruby</div>
+        <div class="skill-item"><strong>フロントエンド:</strong> html, css , JavaScript, TypeScript</div>
+        <div class="skill-item"><strong>フレームワーク:</strong> FastAPI, .NET Framework, Node.js, Next.js, React, Vue.js, Ruby on Rails</div>
+        <div class="skill-item"><strong>インフラ・クラウド:</strong> さくらクラウド, Apache, Nginx, docker</div>
+        <div class="skill-item"><strong>データベース:</strong> MariaDB, PostgreDB, Supabase, Firebase</div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="section" id="aiツールの使用歴">
+      <h2>AIツールの使用歴</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ツール名</th>
+            <th>使用期間</th>
+            <th>用途</th>
+            <th>具体的な活用例</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ChatGPT</td>
+            <td>2023/12〜現在</td>
+            <td>仕様検討、文書作成</td>
+            <td>- 技術選定やアーキテクチャの初期検討<br>- 会議資料や議事録の下書き作成<br>- メール,報告書類等の文章添削</td>
+          </tr>
+          <tr>
+            <td>cursor</td>
+            <td>2024/04〜現在</td>
+            <td>コーディング支援（小規模修正メイン）</td>
+            <td>- 既存コードのメソッド単位での修正コード生成<br>- 軽微なバグの修正コード作成<br>- リファクタリング時の実装補助</td>
+          </tr>
+          <tr>
+            <td>Claude Code</td>
+            <td>2025/05〜現在</td>
+            <td>コーディング支援（設計ベースのシステム開発メイン）</td>
+            <td>- 設計に基づく一連のコード生成<br>- APIや業務ロジックのコード生成<br>- 大規模な改修における- リファクタリング時の実装補助</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section" id="株式会社ファーストローンチ様へ入社を志望する理由">
+      <h2>株式会社ファーストローンチ様へ入社を志望する理由</h2>
+      <p>現職の業務においては、技術的な成長機会には恵まれていた一方で、どうしても"コードを書いた先に何があるか"、すなわち"誰にどう価値が届くか"という実感を得られない状況に、日に日に強い違和感を感じるようになりました。</p>
+      <p>私自身、出身は田舎の農家で、子どもの頃から家族や地域が抱えていた課題を日常的に目の当たりにしてきました。 その経験から、ITの技術を磨けば磨くほど、ITの力を"まだ整っていない現場や困っている人々"に届けることに自分の技術者としての時間と力を使いたい、という想いが年々強くなっています。</p>
+      <p>既に整った環境をさらに最適化していくという現職の事業構造と、自分がより介在したいと考えている領域との間に、どうしてもギャップを感じるようになったことが、今回の判断に至った背景です。</p>
+      <p>友人の北嶋を通じた範囲での認識ではありますが、株式会社ファーストローンチ様の取り組みはまさに「困っている現場を最適化する仕組みづくり」にマッチしていると自分は思っており、本気でに注力したいと強く思っております。</p>
+      <p>決して現職や本事業への否定的な感情からではなく、自身の志向と一致したフィールドで力を発揮したいと思想が主な理由です。</p>
+    </div>
+  </div>
+</body>
+</html>
